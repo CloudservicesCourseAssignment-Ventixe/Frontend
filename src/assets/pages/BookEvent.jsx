@@ -7,7 +7,7 @@ function BookEvent() {
     const [event, setEvent] = useState({})
     const [formData, setFormData] = useState({eventId: id, firstName: "", lastName: "", email: "", streetName: "", postalCode: "", city: "", ticketQuantity: 1})
     const navigate = useNavigate()
-
+    //kommentar
     useEffect(() => {
             getEvent()
         }, [])

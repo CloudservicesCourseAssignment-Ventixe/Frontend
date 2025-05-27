@@ -95,4 +95,4 @@ function BookEvent() {
 export default BookEvent
 
 
-//liten kommentar
+//kommentar

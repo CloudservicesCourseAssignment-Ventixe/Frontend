@@ -4,7 +4,10 @@ function Footer() {
 
 
   return (
-    <footer className='footer'>Footer</footer>
+    <footer className='footer'>
+      <p className='copyright-text'>Copyright © 2025 Peterdraw</p>
+
+      </footer>
   )
 }
 

@@ -15,12 +15,12 @@ function Navbar() {
       <div className='navlinks'>
         <NavLink to="/dashboard" className="navlink">
           <img src="src\assets\Images\dashboard-icon.svg" alt="dashboard-icon" />
-          <p>Dashboard</p>
+          <p className='navlink-text'>Dashboard</p>
         </NavLink>
 
         <NavLink to="/events" className="navlink">
           <img src="src\assets\Images\Events-icon.svg" alt="events-icon" />
-          <p>Events</p>
+          <p className='navlink-text'>Events</p>
         </NavLink>
       </div>
 

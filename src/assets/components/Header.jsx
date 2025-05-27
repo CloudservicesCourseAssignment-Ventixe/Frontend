@@ -1,7 +1,21 @@
 import React from 'react'
+// import { useLocation } from 'react-router-dom';
 
 function Header() {
 
+  //   const location = useLocation();
+
+  //  const getPageTitle = () => {
+  //   const path = location.pathname.toLowerCase();
+
+  //   if (path.startsWith('/events/') && path !== '/events') return 'Event Details';
+  //   if (path === '/events') return 'Events';
+  //   if (path === '/dashboard') return 'Dashboard';
+  //   if (path === '/signin') return 'Sign In';
+  //   if (path === '/signup') return 'Sign Up';
+
+  //   return '';
+  // };
 
   return (
     <header className='header'>

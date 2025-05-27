@@ -3,21 +3,28 @@ import { Link } from 'react-router-dom'
 
 function EventItem({item}) {
   return (
-    
-    
-      
       <Link to={`/events/${item.id}`}>
         <div className='event-card'>
+
           <div className='event-picture'>
-            <img src="src\assets\Images\consert-picture.jpg" alt="event picture" />
+            {item.imagePath?.trim() ? (
+              <img src={item.imagePath} alt="event" />
+            ) : (
+              <div className='no-image'>No image</div>
+            )}
           </div>
-          <p className='event-datetime'>June 5, 2029 - 3.00 PM</p>
+
+          {/* <div className='event-picture'>
+            <img src={item.imagePath} alt="event picture" />
+          </div> */}
+
+          <p className='event-datetime'>{new Date(item.eventDate).toLocaleString()}</p>
           <p className='event-name'>{item.name}</p>
           <div className='event-location'>
             <div className='map-pin'>
               <img src="src\assets\Images\MapPin.svg" alt="" />
             </div>
-            <p className='event-location-text'>Rocky Ridge Exhibition Hall, Denver, CO</p>
+            <p className='event-location-text'> {item.eventAddress.arena}, {item.eventAddress.city}, {item.eventAddress.state}</p>
           </div>
         </div>
       </Link>
@@ -35,3 +42,5 @@ function EventItem({item}) {
 }
 
 export default EventItem
+
+// "src\assets\Images\consert-picture.jpg"

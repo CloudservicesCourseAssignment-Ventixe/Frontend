@@ -171,15 +171,37 @@ h6 {
   height: 100dvh;
   margin: 1rem;
 
+  .header {
+    display: none;
+  }
 
   @media (width >= 768px) {
     grid-template-areas: "navbar header" "navbar main" "navbar footer";
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 80px 1fr; 
+     .header {
+      display: flex;
+      .user-name {
+        display: none;
+      }
+      .user-role {
+        display: none;
+      }
+    }
   }
 
   @media (width >= 1400px) {
     grid-template-areas: "navbar header" "navbar main" "navbar footer";
     grid-template-columns: 250px 1fr;
+    .header {
+      display: flex;
+      .user-name {
+        display: block;
+      }
+      .user-role {
+        display: block;
+      }
+    }
+   
   }
 }
 
@@ -188,16 +210,22 @@ h6 {
   background-color: var(--cool-grey-20);
   border-radius: 1rem;
   padding: 1.5rem 2rem;
+
   
   .ventixe-logo {
     display: flex;
-    /* align-items: flex-end; */
     gap: 1rem;
     margin-bottom: 3rem;
     text-decoration: none;
     color: var(--Secondary-110);
     font-weight: var(--font-weight-medium);
     font-size: 1.5rem;
+
+    img {
+      height: 24px;
+      width: 24px;
+    }
+    
   }
 
   .navlinks {
@@ -219,6 +247,30 @@ h6 {
       height: 24px;
       width: 24px;
     }
+  }
+
+ @media (width >= 768px) {
+
+     .ventixe-logo {
+      p {
+        display: none;
+      }
+     }
+     .navlink-text {
+      display: none;
+     }
+  }
+
+  @media (width >= 1400px) {
+
+    .ventixe-logo {
+      p {
+        display: flex;
+      }
+     }
+     .navlink-text {
+      display: flex;
+     }
   }
 }
 
@@ -320,6 +372,18 @@ h6 {
       object-fit: cover;
       border-radius: 1rem;
       overflow: hidden;
+    }
+
+    .no-image {
+      width: 100%;
+      height: 200px;
+      background-color: var(--grey-40);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--grey-100);
+      font-size: 1rem;
+      border-radius: 1rem;
     }
   }
 

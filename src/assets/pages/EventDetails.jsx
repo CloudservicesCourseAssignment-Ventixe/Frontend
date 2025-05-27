@@ -22,7 +22,7 @@ function EventDetails() {
 
 
   return (
-    <div className='event-details'>
+    <div className='event-details-card'>
       <h1>{event.name}</h1>
       <p>{event.description}</p>
       <Link to={`/events/booking/${id}`}>Book tickets</Link>

@@ -47,8 +47,9 @@ function EventDetails() {
           <p className="about-title">About Event</p>
           <p className="about-text">{event.description}</p>
         </div>
+          <Link className="btn btn-primary" to={`/events/booking/${id}`}>Book event</Link>  
       </div>
-      <Link className="btn btn-primary" to={`/events/booking/${id}`}>Book event</Link>  
+    
     </div>
   )
 }

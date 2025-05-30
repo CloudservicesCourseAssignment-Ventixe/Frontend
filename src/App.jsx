@@ -8,6 +8,7 @@ import EventDetails from './assets/pages/EventDetails.jsx'
 import { Route, Routes } from 'react-router-dom'
 import BookEvent from './assets/pages/BookEvent.jsx'
 import Dashboard from './assets/pages/Dashboard.jsx'
+import CreateEvent from './assets/pages/CreateEvent.jsx'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<EventDetails />} />
         <Route path="/events/booking/:id" element={<BookEvent />} />
+        <Route path="/events/create-event" element={< CreateEvent/>} />
         <Route path="/dashboard" element={< Dashboard/>} />
         {/* Om du vill visa Events även på "/" */}
         <Route path="/" element={<Events />} />

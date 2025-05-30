@@ -59,7 +59,7 @@ function BookEvent() {
 
 
   return (
-    <div>
+    <div className='book-event-page'>
 
         <div className='event-details-card'>
             <div className="event-picture">
@@ -87,38 +87,37 @@ function BookEvent() {
                 <p className="about-text">{event.description}</p>
                 </div>
             </div>
+
+            
+            <form className='book-event-form' noValidate onSubmit={handleSubmit}>
+                <h4>Book Event - {event.name}</h4>
+                <div className='input-group'>
+                    <label>First name</label>
+                    <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
+                </div>
+                <div className='input-group'>
+                    <label>Last name</label>
+                    <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required  />
+                </div>
+                <div className='input-group'>
+                    <label>Email</label>
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} required  />
+                </div>
+                <div className='input-group'>
+                    <label>Street name</label>
+                    <input type="text" name="streetName" value={formData.streetName} onChange={handleChange} required  />
+                </div>
+                <div className='input-group'>
+                    <label>Postal Code</label>
+                    <input type="text" name="postalCode" value={formData.postalCode} onChange={handleChange} required  />
+                </div>
+                <div className='input-group mb-2'>
+                    <label>City</label>
+                    <input type="text" name="city" value={formData.city} onChange={handleChange} required  />
+                </div>
+                <button className='btn btn-primary mb-3' type='submit'>Book now</button>
+            </form>   
         </div>
-
-
-
-        <h1>Book Event - {event.name}</h1>
-        <form className='book-event-form' noValidate onSubmit={handleSubmit}>
-            <div>
-                <label>First name</label>
-                <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
-            </div>
-            <div>
-                <label>Last name</label>
-                <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required  />
-            </div>
-            <div>
-                <label>Email</label>
-                <input type="email" name="email" value={formData.email} onChange={handleChange} required  />
-            </div>
-            <div>
-                <label>Street name</label>
-                <input type="text" name="streetName" value={formData.streetName} onChange={handleChange} required  />
-            </div>
-            <div>
-                <label>Postal Code</label>
-                <input type="text" name="postalCode" value={formData.postalCode} onChange={handleChange} required  />
-            </div>
-            <div>
-                <label>City</label>
-                <input type="text" name="city" value={formData.city} onChange={handleChange} required  />
-            </div>
-            <button type='submit'>Book now</button>
-        </form>    
     </div>
   )
 }

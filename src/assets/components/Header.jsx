@@ -10,6 +10,7 @@ function Header() {
     const path = location.pathname.toLowerCase();
 
     if (path === '/events') return 'Events';
+    if (path === '/events/create-event') return 'Create Event';
     if (path.startsWith('/events/booking/')) return 'Book Event';                              
     if (path.startsWith('/events/') && !path.includes('/booking')) return 'Event Details';     
     if (path === '/dashboard') return 'Dashboard';

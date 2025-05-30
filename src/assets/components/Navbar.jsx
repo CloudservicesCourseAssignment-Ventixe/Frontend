@@ -14,17 +14,20 @@ function Navbar() {
 
       <div className='navlinks'>
         <NavLink to="/dashboard" className="navlink">
-          <img src="\images\dashboard-icon.svg" alt="dashboard-icon" />
+          <i class="fa-solid fa-table-columns"></i>
           <p className='navlink-text'>Dashboard</p>
         </NavLink>
 
         <NavLink to="/events" className="navlink">
-          <img src="\images\Events-icon.svg" alt="events-icon" />
+          <i class="fa-solid fa-ticket"></i>
           <p className='navlink-text'>Events</p>
         </NavLink>
-      </div>
 
-      
+         <NavLink to="/events/create-event" className="navlink">
+          <i class="fa-regular fa-plus"></i>
+          <p className='navlink-text'>Create event</p>
+        </NavLink>
+      </div>  
     </nav>
   )
 }

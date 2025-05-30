@@ -8,18 +8,18 @@ function Navbar() {
   return (
     <nav className='navbar'>
       <NavLink to="/" className='ventixe-logo'>
-        <img src="src\assets\Images\Ventixe-logo.svg" alt="Ventixe logo" />
+        <img src="\images\Ventixe-logo.svg" alt="Ventixe logo" />
         <p>Ventixe</p>
       </NavLink>
 
       <div className='navlinks'>
         <NavLink to="/dashboard" className="navlink">
-          <img src="src\assets\Images\dashboard-icon.svg" alt="dashboard-icon" />
+          <img src="\images\dashboard-icon.svg" alt="dashboard-icon" />
           <p className='navlink-text'>Dashboard</p>
         </NavLink>
 
         <NavLink to="/events" className="navlink">
-          <img src="src\assets\Images\Events-icon.svg" alt="events-icon" />
+          <img src="\images\Events-icon.svg" alt="events-icon" />
           <p className='navlink-text'>Events</p>
         </NavLink>
       </div>

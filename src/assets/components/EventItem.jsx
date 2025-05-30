@@ -5,7 +5,6 @@ function EventItem({item}) {
   return (
       <Link to={`/events/${item.id}`}>
         <div className='event-card'>
-
           <div className='event-picture'>
             {item.imagePath?.trim() ? (
               <img src={item.imagePath} alt="event" />
@@ -13,34 +12,17 @@ function EventItem({item}) {
               <div className='no-image'>No image</div>
             )}
           </div>
-
-          {/* <div className='event-picture'>
-            <img src={item.imagePath} alt="event picture" />
-          </div> */}
-
           <p className='event-datetime'>{new Date(item.eventDate).toLocaleString()}</p>
           <p className='event-name'>{item.name}</p>
           <div className='event-location'>
             <div className='map-pin'>
-              <img src="src\assets\Images\MapPin.svg" alt="" />
+              <img src="\images\MapPin.svg" alt="" />
             </div>
-            <p className='event-location-text'> {item.eventAddress.arena}, {item.eventAddress.city}, {item.eventAddress.state}</p>
+            <p className='event-location-text'>{item.eventAddress.arena}, {item.eventAddress.city}, {item.eventAddress.state}</p>
           </div>
         </div>
       </Link>
-  
-   
-
-
-
-
-
-
-
-   
   )
 }
 
 export default EventItem
-
-// "src\assets\Images\consert-picture.jpg"

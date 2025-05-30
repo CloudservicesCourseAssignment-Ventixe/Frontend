@@ -1,39 +1,41 @@
 import React from 'react'
-// import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function Header() {
+  //Bilder och ikoner kraschar ibland, särskilt av part.startswith
 
-  //   const location = useLocation();
+  const location = useLocation();
 
-  //  const getPageTitle = () => {
-  //   const path = location.pathname.toLowerCase();
+  const getPageTitle = () => {
+    const path = location.pathname.toLowerCase();
 
-  //   if (path.startsWith('/events/') && path !== '/events') return 'Event Details';
-  //   if (path === '/events') return 'Events';
-  //   if (path === '/dashboard') return 'Dashboard';
-  //   if (path === '/signin') return 'Sign In';
-  //   if (path === '/signup') return 'Sign Up';
+    if (path === '/events') return 'Events';
+    if (path.startsWith('/events/booking/')) return 'Book Event';                              
+    if (path.startsWith('/events/') && !path.includes('/booking')) return 'Event Details';     
+    if (path === '/dashboard') return 'Dashboard';
 
-  //   return '';
-  // };
+    return '';
+  };
+
+
 
   return (
     <header className='header'>
-      <h4>Events</h4>
+      <h4>{getPageTitle()}</h4>
       <div className='d-flex'>
         <div className='header-icons'>
           <div className='header-icon'>
-            <img src="src\assets\Images\notification-icon.svg" alt="notification icon" />
+            <img src="\images\notification-icon.svg" alt="notification icon" />
           </div>
           <div className='header-icon'>
-            <img src="src\assets\Images\settings-icon.svg" alt="settings icon" />
+            <img src="\images\settings-icon.svg" alt="settings icon" />
           </div>
         </div>
 
         
         <div className='header-account-info'>
           <div className='user-picture'>
-            <img src="src\assets\Images\Avatar1.svg" alt="user profile picture" />
+            <img src="\images\Avatar1.svg" alt="user profile picture" />
           </div>
           <p className='user-name'>Jessica Eriksson</p>
           <p className='user-role'>Admin</p>

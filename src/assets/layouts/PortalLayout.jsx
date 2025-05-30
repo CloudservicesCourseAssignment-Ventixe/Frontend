@@ -3,7 +3,7 @@ import Nav from '../components/Navbar'
 import Header from '../components/Header'
 import { Outlet } from 'react-router-dom'
 import Footer from '../components/Footer'
-import EventList from '../components/EventList'
+
 
 function PortalLayout() {
 

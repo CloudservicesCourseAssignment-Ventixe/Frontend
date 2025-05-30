@@ -23,9 +23,32 @@ function EventDetails() {
 
   return (
     <div className='event-details-card'>
-      <h1>{event.name}</h1>
-      <p>{event.description}</p>
-      <Link to={`/events/booking/${id}`}>Book tickets</Link>
+      <div className="event-picture">
+        {event.imagePath?.trim() ? (
+          <img src={event.imagePath} alt="event" />
+        ) : (
+          <div className='no-image'>No image</div>
+        )}
+      </div>
+      <div className="event-details-info">
+        <h6>{event.name}</h6>
+        <div className="event-details-time-location-div">
+          <div className="event-details-timedate">
+            <img src="\images\calender-icon.svg" alt="calender icon" />
+            <p>{new Date(event.eventDate).toLocaleString()}</p>
+          </div>
+            <div className="event-details-location">
+              <img src="\images\MapPin.svg" alt="" />
+              <p>{event.eventAddress?.arena}, {event.eventAddress?.city}, {event.eventAddress?.state}</p>
+          </div>
+        </div>
+        <div className="divider"></div>
+        <div className="about-div">
+          <p className="about-title">About Event</p>
+          <p className="about-text">{event.description}</p>
+        </div>
+      </div>
+      <Link className="btn btn-primary" to={`/events/booking/${id}`}>Book event</Link>  
     </div>
   )
 }
